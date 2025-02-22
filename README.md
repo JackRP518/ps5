@@ -1,6 +1,6 @@
 Problem Set 5: Spell Checker
 ============================
-*Computer Programming for Lawyers - Fall 2024*
+*Computer Programming for Lawyers - Spring 2025*
 
 Introduction
 ------------
@@ -22,12 +22,17 @@ Expectations
 * You are permitted to use only the Python features we have covered so far (Chapters 1-10).
 * You should use effective programming style. A portion of your grade will be
 determined by your programming style.
-  * Please continue to adhere to the [Style Guide](https://github.com/Computer-Programming-for-Lawyers/Fall-2024/blob/main/style-guide.md).
+  * Please continue to adhere to the [Style Guide](https://github.com/Computer-Programming-for-Lawyers/Spring-2025/blob/main/style-guide.md).
 
 Summary of Tasks
 ----------------
+
+**This is a two-part problem set. Task 1 is due on March 9 at 8:00pm. We will give you brief feedback on Task 1, and then Task 2 will be due on March 16th at 8pm.**
+
 * Build and submit file `clean.ipynb`
 * Build and submit file `spell.ipynb`
+
+Task 1 is worth up to 2 points, and Task 2 is also worth up to 2 points (aka, there are 4 total possible points one can earn on this assignment). Task 2 is broken into four parts: **You should hand in only one copy of spell.ipynb, a version that incorporates Parts A through D.**
 
 As a reminder, there is no formal 'submit' button on GitHub Classroom. As long as you complete your work in Codespaces and commit and push your work once complete, we will be able to see your final product. For a reminder on how to commit and push your work, see the file `codespaces-instructions.md` (as a reminder, you can open this file by clicking on it in the file explorer, or by entering `code codespaces-instructions.md` into the terminal).
 
@@ -46,15 +51,10 @@ large text files in order to do some useful things. This is also the first assig
 in a truly self-contained and useful piece of software: a working spell
 checker that will try to suggest the correct spelling of a misspelled word.
 
-***
-
-*This week, we're asking you to complete only two tasks. Task 1 is worth one-third of the total possible points for the assignment (excluding style points), and Task 2 is worth two-thirds of the total possible points for the assignment. Task 2 is broken into four
-Parts that, collectively, count for two-thirds. **You should hand in only one copy of spell.ipynb, a version that incorporates Parts A through D.***
-
 Task 1: clean.ipynb
 ----------------
 
-*Worth one-third of the total possible points.*
+**Due March 9 at 8pm**
 
 A crucial (if somewhat hated) step of any form of data analysis is _data cleaning_. Most data you'll deal with in the real world will be inconsistent, messy, or formatted for a different purpose. Some of these flaws come from humans (think data entry errors) and others come from technical sources (think corrupted files). An analyst cleans data by creating little programs to remove the errors, resolve the inconsistencies, and recover the corrupted information. Data cleaning tends to be a painstaking process.
 
@@ -144,11 +144,13 @@ Python to write to a file called `very_important_brief.docx`, you will permanent
 Task 2: spell.ipynb
 ----------------
 
-*Worth two-thirds of the total possible points.*
+**Due March 16 at 8pm**
 
 Now, let's build a spell checker.
 
-We'll tackle this in four parts. **IMPORTANT NOTE: Make sure each part of your program is working before moving to the next part.**
+We'll tackle this in four parts. **You should hand in only one copy of spell.ipynb, a version that incorporates Parts A through D.**
+
+**IMPORTANT NOTE: Make sure each part of your program is working before moving to the next part.**
 
 ### Part A: The Basic Spell-Checker
 
@@ -276,7 +278,7 @@ a user might accidentally type `breead` or `breatd`.
 
 Whenever you detect a misspelled word, apply this heuristic to generate a list of every possible string of characters the user might have meant to have typed instead. To be clear, most of the candidates you generate will be gibberish that aren't real words. We'll get rid of all of those gibberish words in a later step. For now, just come up with every word the user might have meant to have typed.
 
-You must test this heuristic exhaustively. So you need to consider the word with the first letter removed, the second letter removed, and so on, all the way to the word with the final letter removed. **Figuring out how to generate all of these subtle variations is probably the hardest part of the assignment. Revisit the materials from [week 4 lecture](https://github.com/Computer-Programming-for-Lawyers/Fall-2024/tree/main/lecture/week-4) if you're struggling.** As a hint, break up the misspelled word into smaller parts that you then reassemble through concatenation. So, let's say the input includes the misspelled word `breatd` rather than `bread`. To apply the heuristic, you will need to generate all of the following possibilities:
+You must test this heuristic exhaustively. So you need to consider the word with the first letter removed, the second letter removed, and so on, all the way to the word with the final letter removed. **Figuring out how to generate all of these subtle variations is probably the hardest part of the assignment. Revisit the materials from [week 5 lecture](https://github.com/Computer-Programming-for-Lawyers/Spring-2025/tree/main/lecture) if you're struggling.** As a hint, break up the misspelled word into smaller parts that you then reassemble through concatenation. So, let's say the input includes the misspelled word `breatd` rather than `bread`. To apply the heuristic, you will need to generate all of the following possibilities:
 
 ```
 reatd
